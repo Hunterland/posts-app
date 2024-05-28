@@ -13,7 +13,7 @@ import { RouterModule } from '@angular/router';
     <!-- Navegação da aplicação com barra superior azul -->
     <nav class="bg-blue-500 p-4 text-white">
       <!-- Título da aplicação à esquerda -->
-      <h1 class="tex-left">Aplicação de Posts e Comentários</h1>
+      <h1 class="tex-left">Aplicação de Posts e Comentários :D</h1>
     </nav>
     <!-- Div container para centralizar o conteúdo e adicionar margem superior -->
     <div class="container mx-auto mt-4">
