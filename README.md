@@ -10,9 +10,9 @@ Este é o repositório para o projeto "Posts App", uma aplicação web simples p
 - **Layout Responsivo**: O layout da aplicação é responsivo, garantindo que os usuários tenham uma experiência consistente em dispositivos de todos os tamanhos, desde smartphones até desktops.
 - **CRUD de Postagens**: Implementa as operações CRUD (Create, Read, Update, Delete) para as postagens. Isso significa que os usuários podem criar novas postagens, visualizar todas as postagens existentes, atualizar o conteúdo das postagens e excluí-las se necessário.
 - **Interatividade**: Além de visualizar e criar postagens, os usuários também podem interagir com as postagens existentes, deixando comentários associados a cada postagem.
-- **Consumo de API Pública**: Consome a API pública 'https://jsonplaceholder.typicode.com/posts' em Angular.
+- **API JSON Placehoder**: Consome a API pública 'https://jsonplaceholder.typicode.com/posts' em Angular.
 - **Operações CRUD para Posts e Comentários**: Implementa corretamente as operações CRUD (Create, Read, Update, Delete) para posts e comentários.
-- **Uso do Método Subscribe**: Utiliza adequadamente o método `subscribe` para observar e manipular as respostas das requisições HTTP.
+- **Uso do Método Subscribe**: Utiliza adequadamente o método `subscribe` do angular para observar e manipular as respostas das requisições HTTP.
 - **Organização e Clareza do Código**: O código é organizado e claro, seguindo boas práticas de programação.
 - **Gerenciamento "In Memory" e Relacionamentos**: Implementa corretamente o gerenciamento "in memory" e os relacionamentos entre entidades.
 
@@ -67,6 +67,7 @@ A aplicação utiliza gerenciamento em memória para armazenar os dados dos post
 
 ## Uso
 
-Acesse `http://localhost:4200` no seu navegador para ver a aplicação em execução. A página inicial exibirá uma tabela com a lista de postagens obtidas da API.
+Acesse `http://localhost:4200` no seu navegador para ver a aplicação em execução.
+A página inicial exibirá uma tabela com a lista de postagens e comentários obtidas da API.
 
 Desenvolvido por [Hunterland](https://linkedin.com/in/alan-barroncas) 🚀
