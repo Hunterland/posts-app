@@ -4,8 +4,8 @@
     <thead>
       <tr>
         <th class="px-4 py-2">ID</th>
-        <th class="px-4 py-2">Title</th>
-        <th class="px-4 py-2">Actions</th>
+        <th class="px-4 py-2">Título</th>
+        <th class="px-4 py-2">Ações</th>
       </tr>
     </thead>
     <tbody>
@@ -13,25 +13,26 @@
         <td class="border px-4 py-2">{{ post.id }}</td>
         <td class="border px-4 py-2">{{ post.title }}</td>
         <td class="border px-4 py-2 flex space-x-2">
-          <button (click)="editPost(post)" class="bg-yellow-500 text-white p-2 rounded">Edit</button>
-          <button (click)="deletePost(post)" class="bg-red-500 text-white p-2 rounded">Delete</button>
+          <button (click)="editPost(post)" class="bg-yellow-500 text-white p-2 rounded">Editar</button>
+          <button (click)="deletePost(post)" class="bg-red-500 text-white p-2 rounded">Deletar</button>
         </td>
       </tr>
     </tbody>
   </table>
 
-  <!-- Coment�rios associados a cada post -->
+  <!-- Comentários associados a cada post -->
   <div *ngFor="let post of posts" class="mt-4">
     <h3 class="text-lg leading-6 font-medium text-gray-900">Comments for Post {{ post.id }}</h3>
     <ul *ngIf="post.comments && post.comments.length > 0; else noComments">
       <li *ngFor="let comment of post.comments" class="border px-4 py-2 mt-2">
         <strong>{{ comment.name }}</strong>: {{ comment.body }}
         <div class="mt-2 flex space-x-2">
-          <button (click)="editComment(comment)" class="bg-yellow-500 text-white p-2 rounded">Edit</button>
-          <button (click)="deleteComment(comment)" class="bg-red-500 text-white p-2 rounded">Delete</button>
+          <button (click)="editComment(comment)" class="bg-yellow-500 text-white p-2 rounded">Editar</button>
+          <button (click)="deleteComment(comment)" class="bg-red-500 text-white p-2 rounded">Deletar</button>
         </div>
       </li>
     </ul>
+
     <ng-template #noComments>
       <p>No comments available.</p>
     </ng-template>
