@@ -1,5 +1,9 @@
+<!-- Container principal com largura máxima definida -->
 <div class="container mx-auto max-w-xl p-4">
+  <!-- Botão para adicionar um novo post -->
   <button (click)="addPost()" class="bg-blue-500 text-white p-2 rounded">Add Post</button>
+
+  <!-- Tabela para exibir os posts -->
   <table class="table-auto w-full mt-4">
     <thead>
       <tr>
@@ -9,9 +13,11 @@
       </tr>
     </thead>
     <tbody>
+      <!-- Iteração sobre os posts para exibir cada post em uma linha da tabela -->
       <tr *ngFor="let post of posts">
         <td class="border px-4 py-2">{{ post.id }}</td>
         <td class="border px-4 py-2">{{ post.title }}</td>
+        <!-- Coluna de ações com botões para editar e deletar o post -->
         <td class="border px-4 py-2 flex space-x-2">
           <button (click)="editPost(post)" class="bg-yellow-500 text-white p-2 rounded">Editar</button>
           <button (click)="deletePost(post)" class="bg-red-500 text-white p-2 rounded">Deletar</button>
@@ -20,25 +26,31 @@
     </tbody>
   </table>
 
-  <!-- Comentários associados a cada post -->
+  <!-- Iteração sobre os posts para exibir os comentários associados a cada post -->
   <div *ngFor="let post of posts" class="mt-4">
     <h3 class="text-lg leading-6 font-medium text-gray-900">Comments for Post {{ post.id }}</h3>
+
+    <!-- Lista de comentários, se existirem -->
     <ul *ngIf="post.comments && post.comments.length > 0; else noComments">
       <li *ngFor="let comment of post.comments" class="border px-4 py-2 mt-2">
         <strong>{{ comment.name }}</strong>: {{ comment.body }}
+        <!-- Div com bot�es para editar e deletar coment�rios -->
         <div class="mt-2 flex space-x-2">
           <button (click)="editComment(comment)" class="bg-yellow-500 text-white p-2 rounded">Editar</button>
           <button (click)="deleteComment(comment)" class="bg-red-500 text-white p-2 rounded">Deletar</button>
         </div>
       </li>
     </ul>
-
+    <!-- Template para quando não houver comentários -->
     <ng-template #noComments>
       <p>No comments available.</p>
     </ng-template>
+    <!-- Botão para adicionar um novo comentário -->
     <button (click)="addComment(post.id)" class="bg-blue-500 text-white p-2 rounded mt-2">Add Comment</button>
   </div>
 
+  <!-- Componentes para edição de post e comentário -->
   <app-post-edit *ngIf="selectedPost" [post]="selectedPost" (postUpdated)="onPostUpdated($event)"></app-post-edit>
   <app-comment-edit *ngIf="selectedComment" [comment]="selectedComment" (commentUpdated)="onCommentUpdated($event)"></app-comment-edit>
 </div>
+
