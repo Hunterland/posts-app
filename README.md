@@ -1,4 +1,4 @@
-![Posts App Demo](/public/home.gif)
+![Posts App Demo](/public/Newhome.gif)
 
 
 # Posts App
