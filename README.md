@@ -1,6 +1,7 @@
 # Posts App
 
 Este é o repositório para o projeto "Posts App", uma aplicação web simples para criar, visualizar, atualizar e excluir postagens.
+
 ![Posts App Demo](/public/Newhome.gif)
 
 ## Funcionalidades
