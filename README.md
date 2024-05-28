@@ -1,7 +1,6 @@
 # Posts App
 
-Este é o repositório para o projeto "Posts App", uma aplicação web simples para criar, visualizar, atualizar e excluir postagens. Este projeto foi desenvolvido como parte de um teste com o framework Angular.
-
+Este é o repositório para o projeto "Posts App", uma aplicação web simples para criar, visualizar, atualizar e excluir postagens.
 ![Posts App Demo](/public/Newhome.gif)
 
 ## Funcionalidades
