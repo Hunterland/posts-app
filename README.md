@@ -34,6 +34,7 @@ Este projeto foi construído com as seguintes tecnologias:
 - `node_modules`: Dependências instaladas via NPM (não incluídas no repositório).
 - `package.json` & `package-lock.json`: Configuração do NPM e arquivo de bloqueio de dependência.
 
+
 ## Iniciando
 
 Para obter uma cópia local em funcionamento, siga estes passos simples.
@@ -41,22 +42,31 @@ Para obter uma cópia local em funcionamento, siga estes passos simples.
 ### Pré-requisitos
 
 - Node.js instalado em sua máquina.
-- Angular versão 18 instalado.
+- Angular CLI versão 18 instalada.
 
-### Instalação
+## Instalação
 
 1. Clone o repositório:
    ```sh
    git clone https://github.com/Hunterland/posts-app.git
-
-2. Instale as dependências:
+   ```
+2. Navegue até o diretório do projeto:
    ```sh
    cd posts-app
+   ```
+3. Instale as dependências:
+   ```sh
    npm install
    ```
-3. Inicie a aplicação:
+4. Inicie a aplicação:
    ```sh
    ng serve
-   ```
 
 A aplicação utiliza gerenciamento em memória para armazenar os dados dos posts e comentários, não sendo necessário configurar um banco de dados externo. Certifique-se de que a aplicação tenha acesso à internet para consumir a API JSONPlaceholder da [Typicode](https://jsonplaceholder.typicode.com/).
+
+
+## Uso
+
+Acesse `http://localhost:4200` no seu navegador para ver a aplicação em execução. A página inicial exibirá uma tabela com a lista de postagens obtidas da API.
+
+Desenvolvido por [Hunterland](https://linkedin.com/in/alan-barroncas) 🚀
