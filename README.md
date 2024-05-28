@@ -1,3 +1,4 @@
+
 # Posts App
 
 Este é o repositório para o projeto "Posts App", uma aplicação web simples para criar, visualizar, atualizar e excluir postagens.
@@ -10,9 +11,9 @@ Este é o repositório para o projeto "Posts App", uma aplicação web simples p
 - **Layout Responsivo**: O layout da aplicação é responsivo, garantindo que os usuários tenham uma experiência consistente em dispositivos de todos os tamanhos, desde smartphones até desktops.
 - **CRUD de Postagens**: Implementa as operações CRUD (Create, Read, Update, Delete) para as postagens. Isso significa que os usuários podem criar novas postagens, visualizar todas as postagens existentes, atualizar o conteúdo das postagens e excluí-las se necessário.
 - **Interatividade**: Além de visualizar e criar postagens, os usuários também podem interagir com as postagens existentes, deixando comentários associados a cada postagem.
-- **API JSON Placehoder**: Consome a API pública 'https://jsonplaceholder.typicode.com/posts' em Angular.
+- **API JSON Placeholder**: Consome a API pública 'https://jsonplaceholder.typicode.com/posts' em Angular.
 - **Operações CRUD para Posts e Comentários**: Implementa corretamente as operações CRUD (Create, Read, Update, Delete) para posts e comentários.
-- **Uso do Método Subscribe**: Utiliza adequadamente o método `subscribe` do angular para observar e manipular as respostas das requisições HTTP.
+- **Uso do Método Subscribe**: Utiliza adequadamente o método `subscribe` do Angular para observar e manipular as respostas das requisições HTTP.
 - **Organização e Clareza do Código**: O código é organizado e claro, seguindo boas práticas de programação.
 - **Gerenciamento "In Memory" e Relacionamentos**: Implementa corretamente o gerenciamento "in memory" e os relacionamentos entre entidades.
 
@@ -30,10 +31,52 @@ Este projeto foi construído com as seguintes tecnologias:
 
 ## Estrutura do Projeto
 
-- `frontend`: Contém o código-fonte do cliente Angular, incluindo HTML, Tailwind CSS e TypeScript.
-- `node_modules`: Dependências instaladas via NPM (não incluídas no repositório).
-- `package.json` & `package-lock.json`: Configuração do NPM e arquivo de bloqueio de dependência.
+A estrutura do projeto está organizada da seguinte forma:
 
+```
+src/
+  app/
+    components/
+      comment-edit/
+        comment-edit.component.html
+        comment-edit.component.ts
+      comment-list/
+        comment-list.component.html
+        comment-list.component.ts
+      post-edit/
+        post-edit.component.html
+        post-edit.component.ts
+      post-list/
+        post-list.component.html
+        post-list.component.ts
+    services/
+      comment.service.ts
+      post.service.ts
+    app.component.html
+    app.component.ts
+    app.config.ts
+    app.route.ts
+```
+
+### Descrição dos Diretórios e Arquivos
+
+- **`src/app/components/`**: Este diretório contém todos os componentes da aplicação.
+  - **`comment-edit/`**:
+    - `comment-edit.component.html`: Template HTML para o componente de edição de comentários.
+    - `comment-edit.component.ts`: Lógica e definição do componente de edição de comentários.
+  - **`comment-list/`**:
+    - `comment-list.component.html`: Template HTML para o componente de listagem de comentários.
+    - `comment-list.component.ts`: Lógica e definição do componente de listagem de comentários.
+  - **`post-edit/`**:
+    - `post-edit.component.html`: Template HTML para o componente de edição de posts.
+    - `post-edit.component.ts`: Lógica e definição do componente de edição de posts.
+  - **`post-list/`**:
+    - `post-list.component.html`: Template HTML para o componente de listagem de posts.
+    - `post-list.component.ts`: Lógica e definição do componente de listagem de posts.
+
+- **`src/app/services/`**: Este diretório contém os serviços da aplicação, que lidam com a lógica de negócios e comunicação com APIs.
+  - `comment.service.ts`: Serviço para manipulação de dados relacionados à edição de comentários.
+  - `post.service.ts`: Serviço para manipulação de dados relacionados à listagem de posts.
 
 ## Iniciando
 
@@ -43,6 +86,8 @@ Para obter uma cópia local em funcionamento, siga estes passos simples.
 
 - Node.js instalado em sua máquina.
 - Angular CLI versão 18 instalada.
+
+
 
 ## Instalação
 
@@ -61,13 +106,12 @@ Para obter uma cópia local em funcionamento, siga estes passos simples.
 4. Inicie a aplicação:
    ```sh
    ng serve
+   ```
 
 A aplicação utiliza gerenciamento em memória para armazenar os dados dos posts e comentários, não sendo necessário configurar um banco de dados externo. Certifique-se de que a aplicação tenha acesso à internet para consumir a API JSONPlaceholder da [Typicode](https://jsonplaceholder.typicode.com/).
 
-
 ## Uso
 
-Acesse `http://localhost:4200` no seu navegador para ver a aplicação em execução.
-A página inicial exibirá uma tabela com a lista de postagens e comentários obtidas da API.
+Acesse `http://localhost:4200` no seu navegador para ver a aplicação em execução. A página inicial exibirá uma tabela com a lista de postagens e comentários obtidas da API.
 
 Desenvolvido por [Hunterland](https://linkedin.com/in/alan-barroncas) 🚀
