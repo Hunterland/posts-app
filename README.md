@@ -9,7 +9,7 @@ Este é o repositório para o projeto "Posts App", uma aplicação web simples p
 
 - **Design Simples**: A aplicação utiliza um design simples para proporcionar uma experiência de usuário intuitiva.
 - **Layout Responsivo**: O layout da aplicação é responsivo, garantindo que os usuários tenham uma experiência consistente em dispositivos de todos os tamanhos, desde smartphones até desktops.
-- **CRUD de Postagens**: Implementa as operações CRUD (Create, Read, Update, Delete) para as postagens. Isso significa que os usuários podem criar novas postagens, visualizar todas as postagens existentes, atualizar o conteúdo das postagens e excluí-las se necessário.
+- **CRUD de Postagens**: Implementa as operações CRUD (Create, Read, Update, Delete) para as postagens. Os usuários podem criar novas postagens, visualizar todas as postagens existentes, atualizar o conteúdo das postagens e excluí-las se necessário.
 - **Interatividade**: Além de visualizar e criar postagens, os usuários também podem interagir com as postagens existentes, deixando comentários associados a cada postagem.
 - **API JSON Placeholder**: Consome a API pública 'https://jsonplaceholder.typicode.com/posts' em Angular.
 - **Operações CRUD para Posts e Comentários**: Implementa corretamente as operações CRUD (Create, Read, Update, Delete) para posts e comentários.
@@ -56,6 +56,13 @@ src/
     app.component.ts
     app.config.ts
     app.route.ts
+assets/
+environments/
+main.ts
+styles.css
+angular.json
+package.json
+README.md
 ```
 
 ### Descrição dos Diretórios e Arquivos
@@ -75,8 +82,8 @@ src/
     - `post-list.component.ts`: Lógica e definição do componente de listagem de posts.
 
 - **`src/app/services/`**: Este diretório contém os serviços da aplicação, que lidam com a lógica de negócios e comunicação com APIs.
-  - `comment.service.ts`: Serviço para manipulação de dados relacionados à edição de comentários.
-  - `post.service.ts`: Serviço para manipulação de dados relacionados à listagem de posts.
+  - `comment.service.ts`: Serviço para manipulação de dados relacionados a comentários.
+  - `post.service.ts`: Serviço para manipulação de dados relacionados a postagens.
 
 ## Iniciando
 
@@ -86,8 +93,6 @@ Para obter uma cópia local em funcionamento, siga estes passos simples.
 
 - Node.js instalado em sua máquina.
 - Angular CLI versão 18 instalada.
-
-
 
 ## Instalação
 
@@ -113,5 +118,10 @@ A aplicação utiliza gerenciamento em memória para armazenar os dados dos post
 ## Uso
 
 Acesse `http://localhost:4200` no seu navegador para ver a aplicação em execução. A página inicial exibirá uma tabela com a lista de postagens e comentários obtidas da API.
+
+## Contribuição
+
+Se você quiser contribuir para o projeto, sinta-se à vontade para fazer um fork do repositório e enviar um pull request com suas melhorias. Para grandes mudanças, abra uma issue primeiro para discutir o que você gostaria de mudar.
+
 
 Desenvolvido por [Hunterland](https://linkedin.com/in/alan-barroncas) 🚀
