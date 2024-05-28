@@ -1,5 +1,10 @@
+<!-- Div container com classes CSS para centralizar o conteúdo horizontalmente -->
 <div class="container mx-auto">
+
+  <!-- Botão para adicionar um novo comentário -->
   <button (click)="addComment()" class="bg-blue-500 text-white p-2 rounded">Adicionar Comentário</button>
+
+  <!-- Tabela para exibir os comentários existentes -->
   <table class="table-auto w-full mt-4">
     <thead>
       <tr>
@@ -9,15 +14,21 @@
       </tr>
     </thead>
     <tbody>
+      <!-- Loop sobre a lista de comentários para exibir cada um -->
       <tr *ngFor="let comment of comments">
         <td class="border px-4 py-2">{{ comment.id }}</td>
         <td class="border px-4 py-2">{{ comment.name }}</td>
+        <!-- Célula com botões de ação para editar e excluir o comentário -->
         <td class="border px-4 py-2">
+          <!-- Botão para editar o comentário -->
           <button (click)="editComment(comment)" class="bg-yellow-500 text-white p-2 rounded">Editar</button>
+          <!-- Botão para excluir o comentário -->
           <button (click)="deleteComment(comment)" class="bg-red-500 text-white p-2 rounded">Excluir</button>
         </td>
       </tr>
     </tbody>
   </table>
+
+  <!-- Componente de edição de comentário, visível apenas se um comentário estiver selecionado -->
   <app-comment-edit *ngIf="selectedComment" [comment]="selectedComment" (commentUpdated)="onCommentUpdated($event)"></app-comment-edit>
 </div>

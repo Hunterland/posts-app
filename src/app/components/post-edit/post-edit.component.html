@@ -1,13 +1,26 @@
+<!-- Div que cria um fundo semi-transparente cinza que cobre toda a tela, visível apenas se a variável "post" existir -->
 <div class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full" *ngIf="post">
+
+  <!-- Div que contém o formulário de adição de post -->
   <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+
+    <!-- Div com margem superior e centralização horizontal, contendo o título "Add Post" -->
     <div class="mt-3 text-center">
       <h3 class="text-lg leading-6 font-medium text-gray-900">Add Post</h3>
+
+      <!-- Div que contém os campos de entrada de título e corpo do post -->
       <div class="mt-2">
+        <!-- Campo de entrada de título do post -->
         <input [(ngModel)]="post.title" placeholder="Title" class="p-2 border rounded w-full"/>
+        <!-- Campo de entrada de corpo do post -->
         <textarea [(ngModel)]="post.body" placeholder="Body" class="p-2 border rounded w-full mt-2"></textarea>
       </div>
+
+      <!-- Div que contém os botões de salvar e cancelar -->
       <div class="items-center px-4 py-3">
+        <!-- Botão para salvar o post -->
         <button (click)="savePost()" class="bg-blue-500 text-white p-2 rounded">Save</button>
+        <!-- Botão para cancelar a edição do post -->
         <button (click)="cancelEdit()" class="bg-gray-500 text-white p-2 rounded ml-2">Cancel</button>
       </div>
     </div>
