@@ -93,17 +93,26 @@ export class PostListComponent implements OnInit {
   }
 
   onCommentUpdated(updatedComment: Comment): void {
-    // Atualiza ou adiciona o comentário no post correspondente
-    const post = this.posts.find(p => p.id === updatedComment.postId);
-    if (post) {
-      const index = post.comments.findIndex(c => c.id === updatedComment.id);
-      if (index !== -1) {
-        post.comments[index] = updatedComment;
-      } else {
-        post.comments.push(updatedComment);
+    // Verifica se o comentário atualizado e a propriedade postId estão definidos
+    if (updatedComment && updatedComment.postId !== undefined) {
+      // Encontra o post correspondente ao postId do comentário atualizado
+      const post = this.posts.find(p => p.id === updatedComment.postId);
+      // Verifica se o post foi encontrado
+      if (post) {
+        // Encontra o índice do comentário atualizado dentro dos comentários do post
+        const index = post.comments.findIndex(c => c.id === updatedComment.id);
+        // Verifica se o comentário já existe no post
+        if (index !== -1) {
+          // Se o comentário existir, atualiza-o com o comentário atualizado
+          post.comments[index] = updatedComment;
+        } else {
+          // Se o comentário não existir, adiciona o comentário atualizado aos comentários do post
+          post.comments.push(updatedComment);
+        }
       }
     }
-    // Limpa a seleção do comentário
+    // Limpa o comentário selecionado após a atualização ou adição
     this.selectedComment = undefined;
   }
+
 }

@@ -37,5 +37,7 @@ export class CommentEditComponent { // Declaração da classe do componente
   // Método para cancelar a edição do comentário, definindo a propriedade comment como undefined
   cancelEdit(): void {
     this.comment = undefined;
+    this.commentUpdated.emit(); // Emitindo evento de cancelamento
   }
+
 }
