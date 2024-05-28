@@ -41,6 +41,7 @@ Para obter uma cópia local em funcionamento, siga estes passos simples.
 ### Pré-requisitos
 
 - Node.js instalado em sua máquina.
+- Angular versão 18 instalado.
 
 ### Instalação
 
