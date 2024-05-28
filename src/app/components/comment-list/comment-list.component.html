@@ -1,0 +1,23 @@
+<div class="container mx-auto">
+  <button (click)="addComment()" class="bg-blue-500 text-white p-2 rounded">Adicionar Comentário</button>
+  <table class="table-auto w-full mt-4">
+    <thead>
+      <tr>
+        <th class="px-4 py-2">ID</th>
+        <th class="px-4 py-2">Nome</th>
+        <th class="px-4 py-2">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let comment of comments">
+        <td class="border px-4 py-2">{{ comment.id }}</td>
+        <td class="border px-4 py-2">{{ comment.name }}</td>
+        <td class="border px-4 py-2">
+          <button (click)="editComment(comment)" class="bg-yellow-500 text-white p-2 rounded">Editar</button>
+          <button (click)="deleteComment(comment)" class="bg-red-500 text-white p-2 rounded">Excluir</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <app-comment-edit *ngIf="selectedComment" [comment]="selectedComment" (commentUpdated)="onCommentUpdated($event)"></app-comment-edit>
+</div>

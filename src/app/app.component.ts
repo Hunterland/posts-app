@@ -1,13 +1,22 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  imports: [
+    RouterModule,
+  ],
+  template: `
+    <nav class="bg-blue-500 p-4 text-white">
+      <h1 class="tex-left">Aplicação de Posts e Comentários</h1>
+    </nav>
+    <div class="container mx-auto mt-4">
+      <router-outlet></router-outlet>
+    </div>
+  `,
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'posts-app';
+  title = 'angular-crud-app';
 }

@@ -1,0 +1,16 @@
+<div class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
+  <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+    <div class="mt-3 text-center">
+      <h3 class="text-lg leading-6 font-medium text-gray-900">Editar Comentário</h3>
+      <div *ngIf="comment">
+        <input [(ngModel)]="comment.name" placeholder="Nome" class="p-2 border rounded w-full"/>
+        <input [(ngModel)]="comment.email" placeholder="Email" class="p-2 border rounded w-full mt-2"/>
+        <textarea [(ngModel)]="comment.body" placeholder="Comentário" class="p-2 border rounded w-full mt-2"></textarea>
+      </div>
+      <div class="items-center px-4 py-3">
+        <button (click)="saveComment()" class="bg-blue-500 text-white p-2 rounded">Salvar</button>
+        <button (click)="cancelEdit()" class="bg-gray-500 text-white p-2 rounded ml-2">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
