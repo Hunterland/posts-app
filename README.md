@@ -124,4 +124,4 @@ Acesse `http://localhost:4200` no seu navegador para ver a aplicação em execu�
 Se você quiser contribuir para o projeto, sinta-se à vontade para fazer um fork do repositório e enviar um pull request com suas melhorias. Para grandes mudanças, abra uma issue primeiro para discutir o que você gostaria de mudar.
 
 
-Desenvolvido por [Hunterland](https://linkedin.com/in/alan-barroncas) 🚀
+Desenvolvido por [Alan Barroncas](https://linkedin.com/in/alan-barroncas) 🚀
